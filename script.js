@@ -57,8 +57,13 @@ yeezyButton.addEventListener('click', function() {
         h1.className = 'text-center text-light mt-4';
         h1.textContent = data.quote;
 
-        // Append the quote to the wrapper
+        let h3 = document.createElement('h3');
+        h3.className = 'text-center text-light mt-4';
+        h3.textContent = '- Kanye West';
+
+        // Append the quote and author to the wrapper
         document.querySelector('.yeezyisms').appendChild(h1);
+        document.querySelector('.yeezyisms').appendChild(h3);
     })
 
     .catch(error => console.error('Haha your code sucks:', error));
